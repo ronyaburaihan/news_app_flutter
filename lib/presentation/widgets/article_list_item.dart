@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../domain/entities/article.dart';
 
@@ -12,7 +13,9 @@ class ArticleListItem extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Get.toNamed('/articleDetail', arguments: article);
+        },
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
@@ -57,12 +60,7 @@ class ArticleListItem extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(height: 4),
-                    Text(
-                      article.sourceName,
-                      style: TextStyle(
-                        fontSize: 12,
-                      ),
-                    ),
+                    Text(article.sourceName, style: TextStyle(fontSize: 12)),
                   ],
                 ),
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:news_app/presentation/pages/article_detail_page.dart';
 import 'package:news_app/presentation/pages/home_page.dart';
 
 import 'core/bindings/initial_binding.dart';
@@ -19,7 +20,10 @@ class MyApp extends StatelessWidget {
       title: 'Newspaper App',
       initialBinding: InitialBinding(),
       initialRoute: '/',
-      getPages: [GetPage(name: '/', page: () => const HomePage())],
+      getPages: [
+        GetPage(name: '/', page: () => const HomePage()),
+        GetPage(name: '/articleDetail', page: () => const ArticleDetailPage()),
+      ],
     );
   }
 }
