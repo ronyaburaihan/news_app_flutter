@@ -47,6 +47,7 @@ class ArticleDetailPage extends StatelessWidget {
                   errorBuilder:
                       (context, error, stackTrace) => Container(
                         height: 200,
+                        width: MediaQuery.of(context).size.width,
                         color: Colors.grey[300],
                         child: Icon(Icons.image_not_supported, size: 50),
                       ),
