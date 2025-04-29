@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "163026253937",
+    "project_id": "fir-authentication-e5a0a",
+    "storage_bucket": "fir-authentication-e5a0a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163026253937:android:68a99b1fa2a116cc5c03d0",
+        "android_client_info": {
+          "package_name": "com.englesoft.news_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163026253937-iipgl1v04k7g03kvp4qk2jrsodjem4s7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbH_YOkV09NOjgVOA46viqg0qL4lW5if8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163026253937-iipgl1v04k7g03kvp4qk2jrsodjem4s7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

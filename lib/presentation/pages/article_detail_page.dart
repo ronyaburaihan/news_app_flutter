@@ -23,9 +23,10 @@ class ArticleDetailPage extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 if (article.author != null)
-                  Text('${article.author} • ', style: TextStyle(fontSize: 14)),
+                  Expanded(child: Text('${article.author} • ', style: TextStyle(fontSize: 14))),
                 Text(
                   '${article.sourceName} • ',
                   style: TextStyle(fontSize: 14),
