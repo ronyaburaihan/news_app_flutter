@@ -8,7 +8,7 @@ import 'news_remote_datasource.dart';
 
 class NewsApiDataSourceImpl implements NewsRemoteDataSource {
   final http.Client client;
-  final String apiKey = '7b143ede8dd245c4a165d8e782f66fec';
+  final String apiKey = 'YOUR_API_KEY';
   final String baseUrl = 'https://newsapi.org/v2';
 
   NewsApiDataSourceImpl(this.client);
