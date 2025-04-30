@@ -1,6 +1,7 @@
 import 'package:hive/hive.dart';
 
 import '../../domain/entities/article.dart';
+
 part 'article_model.g.dart';
 
 @HiveType(typeId: 0)
@@ -32,15 +33,15 @@ class ArticleModel extends Article {
     required this.content,
     required this.sourceName,
   }) : super(
-    author: author,
-    title: title,
-    description: description,
-    url: url,
-    urlToImage: urlToImage,
-    publishedAt: publishedAt,
-    content: content,
-    sourceName: sourceName,
-  );
+         author: author,
+         title: title,
+         description: description,
+         url: url,
+         urlToImage: urlToImage,
+         publishedAt: publishedAt,
+         content: content,
+         sourceName: sourceName,
+       );
 
   factory ArticleModel.fromJson(Map<String, dynamic> json) {
     return ArticleModel(
@@ -52,6 +53,19 @@ class ArticleModel extends Article {
       publishedAt: DateTime.parse(json['publishedAt']),
       content: json['content'] ?? '',
       sourceName: json['source']['name'] ?? '',
+    );
+  }
+
+  factory ArticleModel.fromFirebase(Map<String, dynamic> json) {
+    return ArticleModel(
+      author: json['author'],
+      title: json['title'] ?? '',
+      description: json['description'] ?? '',
+      url: json['url'] ?? '',
+      urlToImage: json['urlToImage'],
+      publishedAt: DateTime.parse(json['publishedAt']),
+      content: json['content'] ?? '',
+      sourceName: json['sourceName'] ?? '',
     );
   }
 

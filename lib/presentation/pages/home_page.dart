@@ -34,7 +34,7 @@ class HomePage extends GetView<HomeController> {
                 authController.isAuthenticated()
                     ? IconButton(
                       icon: const Icon(Icons.bookmark),
-                      onPressed: () {},
+                      onPressed: () => Get.toNamed("/bookmarks"),
                       tooltip: 'Bookmarks',
                     ) : Container(),
           ),
